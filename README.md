@@ -14,6 +14,7 @@ This repo is the exact toolkit that survived.
 | `src/post_tweet.py` | Post a tweet through the real compose UI |
 | `src/reply_tweet.py` | Reply to any post through the real UI |
 | `src/schedule_post.py` | Schedule posts via X's native scheduler (survives logout) |
+| `n8n/content-pipeline.json` | **Importable n8n workflow**: news RSS → LLM drafts your posts → Google Sheets approval queue → auto-post at 20:00. The full content pipeline in one file. |
 | `docs/survival-notes.md` | The hard-won rules: what gets you flagged, what doesn't |
 
 ## Why the "real UI channel"?
@@ -31,6 +32,17 @@ you ──▶ python ──▶ AppleScript ──▶ Chrome tab (logged in)
                                         ▼
                           X's own JS builds valid requests
 ```
+
+## The n8n pipeline (zero-code mode)
+
+Prefer a visual pipeline over scripts? Import `n8n/content-pipeline.json` into your n8n instance:
+
+```
+Daily 08:00 → AI News RSS → Score Topics → LLM drafts 5 posts → Google Sheets (approval queue) → Telegram ping
+Daily 20:00 → Read approved rows → Post to X (max 3/day) → Mark posted
+```
+
+You bring: an n8n instance, an LLM API key (the example uses GLM's OpenAI-compatible endpoint — swap in any), a Google Sheet, and X credentials on the Twitter node. The "approval queue" pattern means **a human signs off every post** — that's the design, not a limitation.
 
 ## Setup
 
