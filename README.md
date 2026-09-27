@@ -16,6 +16,7 @@ This repo is the exact toolkit that survived.
 | `src/schedule_post.py` | Schedule posts via X's native scheduler (survives logout) |
 | `n8n/content-pipeline.json` | **Importable n8n workflow**: news RSS → LLM drafts your posts → Google Sheets approval queue → auto-post at 20:00. The full content pipeline in one file. |
 | `docs/survival-notes.md` | The hard-won rules: what gets you flagged, what doesn't |
+| `docs/fine-tuning-series-200.md` | 📚 **200-post fine-tuning curriculum** (zh): LoRA/QLoRA params, data engineering, alignment, domain cases, deployment — 8 batches, fact-checked |
 
 ## Why the "real UI channel"?
 
