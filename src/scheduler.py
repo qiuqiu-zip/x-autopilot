@@ -35,6 +35,17 @@ def logged_today():
     with open(LOG_FILE, encoding="utf-8") as f:
         return f"发布成功 {today}" in f.read()
 
+def posted_slot(today, slot):
+    if not os.path.exists(LOG_FILE):
+        return False
+    with open(LOG_FILE, encoding="utf-8") as f:
+        return f"发布成功 {today} slot={slot}" in f.read()
+
+def todays_content_list(content):
+    """内容按空行+===分隔成多条，最多 2 条"""
+    parts = [p.strip() for p in content.split("\n===\n") if p.strip()]
+    return parts[:2]
+
 def todays_file():
     """queue/YYYY-MM-DD.txt 存在则返回内容"""
     path = os.path.join(QUEUE_DIR, time.strftime("%Y-%m-%d") + ".txt")
@@ -73,13 +84,18 @@ def verify_posted():
     return ok, r
 
 def run_once():
-    # 已发过今天的？
-    if logged_today():
-        return "already posted today"
-    # 拿今天的内容
+    now = time.localtime()
+    slot = "morning" if now.tm_hour < 14 else "evening"
+    if posted_slot(time.strftime("%Y-%m-%d"), slot):
+        return f"already posted today slot={slot}"
     path, content = todays_file()
     if not content:
         return "no content for today"
+    items = todays_content_list(content)
+    idx = 0 if slot == "morning" else (1 if len(items) > 1 else 0)
+    if idx >= len(items):
+        return "no content for this slot"
+    content = items[idx]
     # 确保 x.com 登录着
     r, ok = xjs('(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()')
     if "in" not in r:
@@ -94,8 +110,9 @@ def run_once():
     ok, msg = post_to_x(content)
     if ok:
         vok, vdetail = verify_posted()
-        log(f"✅ 发布成功 {time.strftime('%Y-%m-%d')} | 验证: {vdetail[:40]} | 内容: {content[:30]}...")
-        os.rename(path, path + ".sent")
+        log(f"✅ 发布成功 {time.strftime('%Y-%m-%d')} slot={slot} | 验证: {vdetail[:40]} | 内容: {content[:30]}...")
+        if slot == "evening":
+            os.rename(path, path + ".sent")
         return f"posted & verified"
     else:
         log(f"❌ 发布失败 {time.strftime('%Y-%m-%d')} | {msg}")
@@ -107,7 +124,7 @@ def daemon():
         try:
             now = time.localtime()
             # 每天 20:25-23:59 之间执行检查（每晚一条）
-            if now.tm_hour >= 20:
+            if (now.tm_hour == 9 and now.tm_min >= 5) or now.tm_hour >= 20:
                 result = run_once()
                 if "already" not in result:
                     log(f"run_once: {result}")
