@@ -21,3 +21,8 @@
 - 2026-09-28 23:31 run_once: no content for today
 - 2026-09-28 23:41 run_once: no content for today
 - 2026-09-28 23:51 run_once: no content for today
+- 2026-09-29 09:12 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
+- 2026-09-29 09:24 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
+- 2026-09-29 09:35 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
+- 2026-09-29 09:47 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
+- 2026-09-29 09:58 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
