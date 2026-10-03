@@ -40,3 +40,21 @@ Sep 27
 - 2026-10-01 20:07 run_once: posted & verified
 - 2026-10-02 09:08 ✅ 发布成功 2026-10-02 slot=morning | 验证: NONE | 内容: 最近圈子里最值钱的共识，不是哪个模型最强，而是：没有最强，只...
 - 2026-10-02 09:08 run_once: posted & verified
+- 2026-10-02 20:08 ✅ 发布成功 2026-10-02 slot=evening | 验证: Pinned
+Qiu 🛠
+@qiuBuildsAI
+·
+Sep 27
+开工宣言： | 内容: 微调 vs RAG vs Prompt，一张决策树省你两周弯...
+- 2026-10-02 20:08 run_once: posted & verified
+- 2026-10-03 09:09 ✅ 发布成功 2026-10-03 slot=morning | 验证: NONE | 内容: "THE AI AGENT ECONOMY NEEDS MO...
+- 2026-10-03 09:09 run_once: posted & verified
+- 2026-10-03 20:09 ✅ 发布成功 2026-10-03 slot=evening | 验证: Pinned
+Qiu 🛠
+@qiuBuildsAI
+·
+Sep 27
+开工宣言： | 内容: AI 让答案变得无限便宜——问题成了新的稀缺品。
+
+好问题的...
+- 2026-10-03 20:09 run_once: posted & verified
