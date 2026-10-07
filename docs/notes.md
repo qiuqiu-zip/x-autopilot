@@ -54,3 +54,6 @@
 - 密码确认门（Account information）验证码通道可用：Forgot password → 邮箱验证码 → 设新密码。
 - 回复大V：进其主页找 <3-6h 新帖 → 点 reply → insertHTML → tweetButton；已验证两次成功（dotey、op7418）。
 - 账号最终身份：Qiu 🛠 @qiuBuildsAI，密码 Qiu-Builds-2026!（用户已被告知保存）。
+
+- X 计字规则：中文每字=2 units，280 units 上限——中文帖正文控制在 ~130 字以内，否则 Post 按钮 DISABLED。
+- 搜索限流绕过：X 搜索/时间线渲染被限时，用浏览器标签访问 google.com 搜 site:x.com 关键词，提取 /status/ 直链，直链页不受限可渲染可回复。
