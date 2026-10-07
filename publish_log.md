@@ -124,3 +124,4 @@ ChatGP...
 - 2026-10-06 23:40 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
 - 2026-10-06 23:52 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
 - 2026-10-07 02:30 🤖 调度器启动（每日一条模式）
+- 2026-10-07 09:11 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
