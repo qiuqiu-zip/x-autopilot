@@ -129,3 +129,5 @@ ChatGP...
 - 2026-10-07 09:34 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
 - 2026-10-07 09:46 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
 - 2026-10-07 09:57 ERROR: Command '['python3', '/Users/qiuqiuqiu/.zcode/workspace/default/x-autopilot/src/xjs.py', '(function(){ return !!document.querySelector(\'[data-testid="AppTabBar_Profile_Link"]\') ? "in" : (location.href = "/home", "nav"); })()']' timed out after 90 seconds
+- 2026-10-07 20:08 ❌ 发布失败 2026-10-07 | fill failed: NO_BOX
+- 2026-10-07 20:08 run_once: failed: fill failed: NO_BOX
