@@ -111,7 +111,9 @@ def run_once():
     if ok:
         vok, vdetail = verify_posted()
         log(f"✅ 发布成功 {time.strftime('%Y-%m-%d')} slot={slot} | 验证: {vdetail[:40]} | 内容: {content[:30]}...")
-        if slot == "evening":
+        # 单篇文件发完即归档，防止晚间重复发布同一内容
+        items_left = [x for x in open(path, encoding='utf-8').read().split("\n===\n") if x.strip()]
+        if slot == "evening" or len(items_left) <= 1:
             os.rename(path, path + ".sent")
         return f"posted & verified"
     else:
